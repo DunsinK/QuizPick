@@ -12,7 +12,7 @@ export default function LandingPage() {
           Welcome to <span className="text-green-600">QuizPick</span>
         </h1>
 
-        <p className="max-w-2xl text-lg md:text-xl text-gray-600 mb-10">
+        <p className=" text-5xl max-w-1xl text-lg md:text-xl text-gray-600 mb-10">
           The smarter way to study. QuizPick uses{" "}
           <span className="font-semibold text-green-700">Gemini AI</span> to
           instantly turn your notes, slides, and study materials into
@@ -26,12 +26,14 @@ export default function LandingPage() {
           >
             Get Started
           </Link>
+          <button>
           <a
             href="#learn-more"
-            className="bg-white text-green-700 border border-green-600 hover:bg-green-50 font-semibold px-8 py-3 rounded-full text-lg transition-all duration-200 shadow-sm"
+            className="bg-white text-green-700 hover:bg-green-50 font-semibold px-8 py-3 rounded-full text-lg transition-all duration-200 shadow-sm"
           >
             Learn More
           </a>
+          </button>
         </div>
       </section>
 

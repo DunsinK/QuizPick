@@ -5,6 +5,13 @@ import {Routes, Route, Link} from 'react-router-dom'
 import LandingPage from "./pages/LandingPage"
 import QuizPage from "./pages/QuizPage"
 import Logo from "./assets/LogoBG.png"
+function toGithub(){
+  window.location.href = 'https://github.com/DunsinK/QuizPick';
+}
+function toDevPost(){
+  window.location.href = 'https://devpost.com/software/quiz-pick';
+}
+
 function Navbar() {
   return (
     <div className="w-full flex items-center justify-between px-12 py-4 bg-green-600">
@@ -14,8 +21,8 @@ function Navbar() {
           <button className="bg-[#00a85a]"> Home </button>
         </Link>
 
-        <Link to="/about" className="bg-green-700 hover:bg-green-500 text-white text-lg font-semibold px-6 py-3 rounded-full transition-all duration-200 shadow-md">
-          <button className="bg-[#007a40]"> About </button>
+        <Link to="/quiz" className="bg-green-700 hover:bg-green-500 text-white text-lg font-semibold px-6 py-3 rounded-full transition-all duration-200 shadow-md">
+          <button className="bg-[#007a40]"> Start </button>
         </Link>
       </div>
 
@@ -28,18 +35,16 @@ function Navbar() {
 
       {/* Right Links */}
       <div className="flex space-x-6">
-        <Link
-          to="/link3"
-          className="bg-green-700 hover:bg-green-500 text-white text-lg font-semibold px-6 py-3 rounded-full transition-all duration-200 shadow-md"
-        >
-          Link 3
-        </Link>
-        <Link
-          to="/link4"
-          className="bg-green-700 hover:bg-green-500 text-white text-lg font-semibold px-6 py-3 rounded-full transition-all duration-200 shadow-md"
-        >
-          Link 4
-        </Link>
+        <button className="bg-[#007a40]" onClick={toDevPost}>
+          Devpost
+        </button>
+        
+        
+        <button className = "bg-[#00a85a]" onClick={toGithub}>
+          Github
+        </button>
+
+        
       </div>
     </div>
   );
